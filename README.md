@@ -5,8 +5,7 @@
 在Telegram群中，可以透过:
 
 ```
-[[江泽民]]
-{{江泽民}}
+江泽民
 ```
 
 语法进行搜索维基百科。
@@ -14,7 +13,7 @@
 # 安装
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 cp config.example.py config.py
 ```
 
@@ -23,7 +22,7 @@ cp config.example.py config.py
 然后运行机器人:
 
 ```bash
-python bot.py
+python3 bot.py
 ```
 
 另外，你可以透过`pm2`来守护本进程，只需在专案目录执行:
