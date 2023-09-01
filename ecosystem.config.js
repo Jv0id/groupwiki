@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: 'groupwiki',
-    script: 'python bot.py',
+    script: 'python3 bot.py',
     instances: 1,
     autorestart: true,
   }]
