@@ -11,18 +11,20 @@ wikipedia.set_lang("zh")
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     if (message.chat.type == 'private'):
-        bot.send_message(message.chat.id, '使用[[]]或{{}}提供到中文維基百科的連結')
+        bot.send_message(message.chat.id, '直接输入文字，如：华为')
 
 @bot.message_handler(commands=['version'])
 def help(message):
     if (message.chat.type == 'private'):
-        bot.reply_to(message, "https://github.com/axiref/groupwiki")
+        bot.reply_to(message, "https://github.com/Jv0id/groupwiki")
 
-@bot.message_handler(regexp=regexp)
+#@bot.message_handler(regexp=regexp)
+@bot.message_handler()
 def search_keyword(message):
-    m = re.search(regexp, message.text)
-    keyword = m[1] or m[2]
-    if not keyword: return
+    #m = re.search(regexp, message.text)
+    #keyword = m[1] or m[2]
+    #if not keyword: return
+    keyword = message.text
     try:
         result = wikipedia.page(keyword)
         bot.reply_to(message, unquote(result.url), parse_mode="markdown")
