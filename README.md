@@ -1,4 +1,8 @@
+# 该代码已不再更新，更多功能请转 https://github.com/Jv0id/telegram-wikipedia 
+
+
 # Groupwiki
+
 
 适用于Telegram群的维基百科搜索机器人
 
